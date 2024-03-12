@@ -16,6 +16,7 @@
 	<input type="text" id="search" placeholder="Buscar resoluciones...">
 </center>
 	<fieldset>
+	<section>
     <h2><font size="5"><u>Laboratorio de Sistemas Embebidos (LSE)</u></font></h2>
 
     <h3>Especialización en Sistemas Embebidos</h3>
@@ -35,9 +36,11 @@
 	<ul>
         <li><a href="https://drive.google.com/file/d/1StbCG3kbfLWtwWS0DEXqTdqh5JITfOd1/view">627/21</a></li>
     </ul>
+	</section>
 	</fieldset>
 	
 	<fieldset>
+	<section>
     <h2><font size="5"><u>Escuela de Graduados en Ingeniería Electrónica y Telecomunicaciones (EGRIET)</u></font></h2>
 	
     <h3>Especialización en Automatización Industrial</h3>
@@ -57,9 +60,11 @@
         <li><a href="https://drive.google.com/file/d/1AK3WsLWSk2u6LRWrwx_JNJj6iPi-nWCG/view">1131/06</a></li>
         <li><a href="https://drive.google.com/file/d/1zwcl2hlGPSZrm58-AydUQTgkU8RTW9hP/view">3723/15</a></li>
     </ul>
+	</section>
 	</fieldset>
 	
 	<fieldset>
+	<section>
 	<h2><font size="5"><u>Higiene y Seguridad en el Trabajo</u></font></h2>
 	
     <h3>Especializacion en Higiene y Seguridad en el Trabajo</h3>
@@ -69,9 +74,11 @@
 	<li><a href="https://drive.google.com/file/d/17Vt7eEWEErbzd3jDSTCERrDODT9Nv9_m/view">2668/11</a></li>
         <li><a href="https://drive.google.com/file/d/1hYXufigeOT67AWVdbW-6gMLDmRkP_SXD/view">247/21</a></li>
     </ul>
+	</section>
 	</fieldset>
 	
 	<fieldset>
+	<section>
 	<h2><font size="5"><u>Escuela de Ingeniería Ferroviaria</u></font></h2>
 	
     <h3>Especialización en Ingeniería Ferroviaria</h3>
@@ -81,6 +88,7 @@
 	<li><a href="https://drive.google.com/file/d/1e9zwms3tIrwYWoL_AyQWO1qW2sVpQ96A/view">2447/11</a></li>
         <li><a href="https://drive.google.com/file/d/1-l3lrMKIBxWaWnYqwZ0tbu13K3WUhXty/view">6447/13</a></li>
     </ul>
+	</section>
 	</fieldset>
 	
 	<fieldset>
@@ -228,20 +236,20 @@
 	</fieldset>
 	
 </fieldset>
-	<script>
-        	document.getElementById("search").addEventListener("input", function() {
-            		var searchTerm = this.value.toLowerCase();
-            		var resolutions = document.querySelectorAll("li");
+    <script>
+        document.getElementById("search").addEventListener("input", function() {
+            var searchTerm = this.value.toLowerCase();
+            var resolutions = document.querySelectorAll("li");
 
-            	resolutions.forEach(function(resolution) {
-                	var text = resolution.textContent.toLowerCase();
-                	if (text.includes(searchTerm)) {
-                    		resolution.style.display = "block";
-                	} else {
-                    		resolution.style.display = "none";
-                	}
-            	});
+            resolutions.forEach(function(resolution) {
+                var text = resolution.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    resolution.style.display = "block";
+                } else {
+                    resolution.style.display = "none";
+                }
+            });
         });
-   	</script>
+    </script>
 </body>
 </html>
