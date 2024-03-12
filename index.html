@@ -16,7 +16,7 @@
 	<input type="text" id="search" placeholder="Buscar resoluciones...">
 </center>
 	<fieldset>
-	<section>
+	<section id="sections">
     <h2><font size="5"><u>Laboratorio de Sistemas Embebidos (LSE)</u></font></h2>
 
     <h3>Especialización en Sistemas Embebidos</h3>
@@ -237,14 +237,17 @@
 	
 </fieldset>
     <script>
+        // Función para filtrar las resoluciones según el número de resolución
         document.getElementById("search").addEventListener("input", function() {
             var searchTerm = this.value.toLowerCase();
-            var resolutions = document.querySelectorAll("li");
+            var resolutions = document.querySelectorAll("ul li a");
 
             resolutions.forEach(function(resolution) {
                 var text = resolution.textContent.toLowerCase();
                 if (text.includes(searchTerm)) {
                     resolution.style.display = "block";
+                    resolution.parentNode.style.display = "block"; // Mostrar la lista que contiene la resolución
+                    resolution.parentNode.parentNode.style.display = "block"; // Mostrar la sección que contiene la lista
                 } else {
                     resolution.style.display = "none";
                 }
