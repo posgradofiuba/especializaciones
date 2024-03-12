@@ -3,12 +3,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resoluciones de Posgrado</title>
+	<style>
+        #search {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body style="font-family: sans-serif;">
 <fieldset>
-	<center>
-    <h1><font size="6">Resoluciones de Posgrado (Especializaciones) - <a href="https://posgradofiuba.github.io/maestrias">IR A MAESTRÍAS</a></font></h1>
-	</center>
+<center>
+    	<h1><font size="6">Resoluciones de Posgrado (Especializaciones) - <a href="https://posgradofiuba.github.io/maestrias">IR A MAESTRÍAS</a></font></h1>
+	<input type="text" id="search" placeholder="Buscar resoluciones...">
+</center>
 	<fieldset>
     <h2><font size="5"><u>Laboratorio de Sistemas Embebidos (LSE)</u></font></h2>
 
@@ -222,5 +228,20 @@
 	</fieldset>
 	
 </fieldset>
+	<script>
+        	document.getElementById("search").addEventListener("input", function() {
+            		var searchTerm = this.value.toLowerCase();
+            		var resolutions = document.querySelectorAll("li");
+
+            	resolutions.forEach(function(resolution) {
+                	var text = resolution.textContent.toLowerCase();
+                	if (text.includes(searchTerm)) {
+                    		resolution.style.display = "block";
+                	} else {
+                    		resolution.style.display = "none";
+                	}
+            	});
+        });
+   	</script>
 </body>
 </html>
